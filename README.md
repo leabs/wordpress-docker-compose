@@ -5,11 +5,9 @@ This is a simple docker-compose file to run a Wordpress site with MySQL and phpM
 ## Usage
 
 _Note_: If you're using an M series mac, you need to install Rosetta with:
-`softwareupdate --install-rosetta` as the images are set to "platform: linux/amd64"
+`softwareupdate --install-rosetta` if you wish to build locally. The images are set to "platform: linux/amd64" for maximum compatibility.
 
-- If you want to try it locally, you can run `docker-compose up` in the same directory as the `docker-compose.yaml` file assuming you have docker installed with the `wordpress`, `mysql`, and `phpmyadmin` images running.
-
-- If you want to deploy it to an EC2 instance, you can follow the instructions below.
+- If you want to try it locally, you can clone this repo and simply run `docker-compose up` assuming you have docker installed with the `wordpress`, `mysql`, and `phpmyadmin` images running.
 
 ## Deployment to EC2
 

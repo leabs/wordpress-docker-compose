@@ -16,7 +16,7 @@ EC2 instance:
 - Create an EC2 instance with Amazon Linux 2 AMI
 - `sudo yum update -y` # Update the system
 - `sudo amazon-linux-extras install docker` # Install docker
-- `start docker.service` # Start the docker service
+- `start docker.service` or `sudo systemctl start docker` # Start the docker service
 - `sudo usermod -a -G docker ec2-user` # Add ec2-user to the docker group so we don't have to use sudo
 - You must restart and log back in after making user group changes with `exit`
 - `mkdir downloads` # Create a directory for the project
@@ -34,3 +34,7 @@ EC2 instance:
 - `sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose` # Download docker-compose
 - `sudo chmod +x /usr/local/bin/docker-compose` # Make docker-compose executable
 - `docker-compose up` # Start the containers!
+
+#### Extra commands:
+
+- `sudo systemctl enable docker` Enable Docker to start on boot (optional)
